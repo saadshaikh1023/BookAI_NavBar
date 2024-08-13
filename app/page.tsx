@@ -8,14 +8,14 @@ export default function Home() {
   const [activeLink, setActiveLink] = useState<string>("Features"); // Default active link
   const [darkMode, setDarkMode] = useState<boolean>(false);
 
-  // Load theme preference from local storage on component mount
+  // use to  Load theme preference from local storage on component mount
   useEffect(() => {
     const savedMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(savedMode);
     document.documentElement.classList.toggle("dark", savedMode);
   }, []);
 
-  // Toggle dark mode and save preference to local storage
+  // using to Toggle dark mode and save preference to local storage
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => {
       const newMode = !prevMode;
@@ -25,7 +25,7 @@ export default function Home() {
     });
   };
 
-  // Handle link click
+  //just to handle link click
   const handleLinkClick = (link: string) => {
     setActiveLink(link);
   };
@@ -107,7 +107,7 @@ export default function Home() {
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke={darkMode ? "currentColor" : "black"} // Adjust line color based on dark mode
+                stroke={darkMode ? "currentColor" : "black"} 
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -123,7 +123,7 @@ export default function Home() {
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
-                stroke={darkMode ? "currentColor" : "black"} // Adjust line color based on dark mode
+                stroke={darkMode ? "currentColor" : "black"}
                 strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -215,9 +215,8 @@ export default function Home() {
           </div>
         </nav>
       </header>
-      {/* Main content */}
       <main>
-        {/* Your main content here */}
+       // your main content will be here
       </main>
     </div>
   );
